@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}VAS{% endblock %}
+{% block content %}
+<h1>SMSC</h1>
+  <h2><a href="{% url 'smscerror' %}">Get stats of Daily Error Code on SMSC</a></h2>
+  <h2><a href="{% url 'HCSMSC' %}">Health Check SMSC</a></h2>
+  <h2><a href="{% url 'cdrSMSC' %}">Get CDR SMSC</a></h2>
+{% endblock %}

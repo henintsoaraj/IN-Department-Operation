@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Paramétrage Orange détaillant et activation #233#{% endblock %}
+{% block content %}
+<h1 style="text-align:center"><b>Paramétrage Orange détaillant et activation #233#</b></h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ orangeDet_form.as_p}}
+        <input type="submit" value="Generate file" />
+    </form>
+
+    {% for item in res %}
+    <a href="{% url 'down_bar' filename=item %}">{{ item|linebreaks }}</a>
+    {% endfor %}
+
+
+{% endblock %}

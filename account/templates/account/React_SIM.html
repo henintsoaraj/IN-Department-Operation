@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Reactivation SIM{% endblock %}
+{% block content %}
+{% load static %}
+{% load textColor %}
+<aside>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ reactSIM_form.as_p}}
+    <input type="submit" value="Reactivate" />
+</form>
+</aside>
+
+
+<h1 style="text-align:center"><b>Reactivation SIM</b></h1>
+
+<div class="sam">
+<fieldset>
+    <legend>result</legend>
+    <p>
+        {{ resp1|color1 }}<span style="color: red"> {{ resp1|color2 }} </span> {{ resp1|color3}}
+    <br><br>
+        {{ resp2|color1 }}<span style="color: red"> {{ resp2|color2 }} </span> {{ resp2|color3 }}
+    <br><br>
+        {{ resp3|color1 }}<span style="color: red"> {{ resp3|color2 }} </span> {{ resp3|color3}}
+
+        <br><br>
+        {{ resp4|color1}}<span style="color: red"> {{ resp4|color2 }} </span> {{ resp4|color3 }}
+    </p>
+</fieldset>
+</div>
+{% endblock %}
